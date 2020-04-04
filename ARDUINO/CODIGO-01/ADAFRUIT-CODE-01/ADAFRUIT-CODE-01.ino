@@ -15,7 +15,7 @@
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
 #define AIO_USERNAME    "gabriel_rc"
 #define AIO_KEY         "aio_ymif220PeInF0OUsEnM7AyHyOxCX"
-#define AIO_GROUP       "Project."
+#define AIO_GROUP       "project."
 
 /************ Global State  ******************/
 
@@ -31,11 +31,14 @@ Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO
 
 // Setup a feed called '' for publishing.
 // Notice MQTT paths for AIO follow the form: <username>/feeds/<feedname>
-Adafruit_MQTT_Publish LevelFeed = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"LevelFeed");
-Adafruit_MQTT_Publish PresenceFeed = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"PresenceFeed");
+Adafruit_MQTT_Publish LevelFeed = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"levelfeed");
+Adafruit_MQTT_Publish PresenceFeed = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"presencefeed");
 // Setup a feed called '' for subscribing to changes.
-Adafruit_MQTT_Subscribe ServoFeed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"ServoFeed");
-Adafruit_MQTT_Subscribe StepMotorFeed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"StepMotorFeed");
+Adafruit_MQTT_Subscribe ServoFeed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"servofeed");
+Adafruit_MQTT_Subscribe StepMotorFeed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"stepmotorfeed");
+Adafruit_MQTT_Subscribe Mix1Feed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"mix1feed");
+Adafruit_MQTT_Subscribe Mix2Feed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"mix2feed");
+Adafruit_MQTT_Subscribe Mix3Feed = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/feeds/"AIO_GROUP"mix3feed");
 
 /*************************** Sketch Code ************************************/
 
@@ -43,6 +46,11 @@ void MQTT_connect();
 
 #define STEPS 20
 int numSteps;
+int count = 0;
+int pos1 = 20;
+int pos2 = 40;
+int pos3 = 60;
+int pos4 = 80;
 
 Stepper stepper(STEPS, D1, D2, D3, D4);
 Servo servoMotor;
@@ -123,6 +131,30 @@ void loop() {
       numSteps = atoi((char *)StepMotorFeed.lastread);
       stepper.step(numSteps);
     }
+
+    if (subscription == &Mix1Feed) {
+      Serial.print(F("Mix 1"));
+      Serial.println((char *)StepMotorFeed.lastread);
+      if (Mix1Feed.lastread==1){
+        secuencia1();
+        }
+    }
+
+     if (subscription == &Mix2Feed) {
+      Serial.print(F("Mix 2"));
+      Serial.println((char *)StepMotorFeed.lastread);
+      if (Mix2Feed.lastread==1){
+        secuencia2();
+        }
+    }
+
+     if (subscription == &Mix3Feed) {
+      Serial.print(F("Mix 3"));
+      Serial.println((char *)StepMotorFeed.lastread);
+      if (Mix3Feed.lastread==1){
+        secuencia3();
+        }
+    }
   }
 
   /*************************** Publish Code ************************************/
@@ -196,4 +228,89 @@ long distancia(int trigger, int echo) {
   t = pulseIn(echo, HIGH); //obtenemos el ancho del pulso
   d = t / 59;           //escalamos el tiempo a una distancia en cm
   return d;
+}
+
+void secuencia1() {
+  stepper.step(pos1);
+  servoMotor.write(90);
+  delay(3000);
+  servoMotor.write(0);
+  count++;
+
+  if (count == 1) {
+    stepper.step(pos2);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count++;
+  } else {
+    count = 0;
+  }
+
+  if (count == 2) {
+    stepper.step(pos3);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count++;
+  } else {
+    count = 0;
+  }
+
+  if (count == 3) {
+    stepper.step(pos4);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count = 0;
+  } else {
+    count = 0;
+  }
+}
+
+void secuencia2() {
+  stepper.step(pos2);
+  servoMotor.write(90);
+  delay(3000);
+  servoMotor.write(0);
+  count++;
+
+  if (count == 1) {
+    stepper.step(pos3);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count++;
+  } else {
+    count = 0;
+  }
+
+  if (count == 2) {
+    stepper.step(pos4);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count=0;
+  } else {
+    count = 0;
+  }
+}
+
+
+void secuencia3() {
+  stepper.step(pos3);
+  servoMotor.write(90);
+  delay(3000);
+  servoMotor.write(0);
+  count++;
+
+  if (count == 1) {
+    stepper.step(pos4);
+    servoMotor.write(90);
+    delay(3000);
+    servoMotor.write(0);
+    count = 0;
+  } else {
+    count = 0;
+  }
 }
