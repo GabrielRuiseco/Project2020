@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">App project2020</string>
+    <string name="login_btn">Iniciar</string>
+    <string name="login_lbl">INICIO</string>
+    <string name="mail_ph">Correo</string>
+    <string name="pass_ph">Contraseña</string>
+    <string name="c_pass_ph">Confirmar contraseña</string>
+    <string name="regist_btn">REGISTRAR</string>
+    <string name="regist_lbl">REGISTRO</string>
 </resources>
