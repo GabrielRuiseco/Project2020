@@ -47,6 +47,7 @@ void MQTT_connect();
 #define STEPS 20
 int numSteps;
 int count = 0;
+int seqcount = 0;
 int pos1 = 20;
 int pos2 = 40;
 int pos3 = 60;
@@ -135,25 +136,34 @@ void loop() {
     if (subscription == &Mix1Feed) {
       Serial.print(F("Mix 1"));
       Serial.println((char *)StepMotorFeed.lastread);
-      if (Mix1Feed.lastread==1){
-        secuencia1();
+      if (Mix1Feed.lastread == 1) {
+        if (seqcount = 0) {
+          seqcount++;
+          secuencia1();
         }
+      }
     }
 
-     if (subscription == &Mix2Feed) {
+    if (subscription == &Mix2Feed) {
       Serial.print(F("Mix 2"));
       Serial.println((char *)StepMotorFeed.lastread);
-      if (Mix2Feed.lastread==1){
-        secuencia2();
+      if (Mix2Feed.lastread == 1) {
+        if (seqcount = 0) {
+          seqcount++;
+          secuencia2();
         }
+      }
     }
 
-     if (subscription == &Mix3Feed) {
+    if (subscription == &Mix3Feed) {
       Serial.print(F("Mix 3"));
       Serial.println((char *)StepMotorFeed.lastread);
-      if (Mix3Feed.lastread==1){
-        secuencia3();
+      if (Mix3Feed.lastread == 1) {
+        if (seqcount = 0) {
+          seqcount++;
+          secuencia3();
         }
+      }
     }
   }
 
@@ -162,6 +172,10 @@ void loop() {
   if (millis() - tiempoUltimaLectura > 30000) {
     distVarValue1 = distancia(Trigger, Echo);
     distVarValue2 = distancia(Trigger1, Echo1);
+
+    if (distVarValue1 > 50 && distVarValue2 > 50) {
+      seqcount = 0;
+    }
 
     if (! LevelFeed.publish(distVarValue1)) {
       Serial.println(F("Failed Distancia"));
@@ -290,7 +304,7 @@ void secuencia2() {
     servoMotor.write(90);
     delay(3000);
     servoMotor.write(0);
-    count=0;
+    count = 0;
   } else {
     count = 0;
   }

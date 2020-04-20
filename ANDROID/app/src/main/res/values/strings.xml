@@ -5,6 +5,12 @@
     <string name="mail_ph">Correo</string>
     <string name="pass_ph">Contraseña</string>
     <string name="c_pass_ph">Confirmar contraseña</string>
-    <string name="regist_btn">REGISTRAR</string>
+    <string name="regact_btn">REGISTRARSE</string>
+    <string name="reg_btn">REGISTRAR</string>
     <string name="regist_lbl">REGISTRO</string>
+    <string name="name">Nombre</string>
+    <string name="seq1">Sequencia 1</string>
+    <string name="seq2">Sequencia 2</string>
+    <string name="seq3">Sequencia 3</string>
+    <string name="seq_lbl">Sequencias</string>
 </resources>
