@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void login(){
-        string url
+        String url="http://127.0.0.1:8000/reg_usr";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET,url,)
+
     }
 }
