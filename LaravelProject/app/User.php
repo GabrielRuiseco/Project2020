@@ -47,4 +47,13 @@ class User extends Authenticatable
         return $this->adafuit_key;
     }
 
+    public function getMail()
+    {
+        return $this->email;
+    }
+
+    public function getPass()
+    {
+        return $this->password;
+    }
 }

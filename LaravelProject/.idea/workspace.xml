@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abe7ebcc-5a4e-47ad-abd1-e2cd71f1b917" name="Default Changelist" comment="" />
+    <list default="true" id="abe7ebcc-5a4e-47ad-abd1-e2cd71f1b917" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ANDROID/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/adafruit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/adafruit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +28,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -21,6 +50,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -116,12 +148,13 @@
   <component name="ProjectId" id="1ahiZ6olkmsIMQ1THISHm6HNZuS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -159,7 +192,10 @@
       <workItem from="1587194281979" duration="6973000" />
       <workItem from="1587243770230" duration="6785000" />
       <workItem from="1587321422906" duration="2586000" />
-      <workItem from="1587357089664" duration="12613000" />
+      <workItem from="1587357089664" duration="30506000" />
+      <workItem from="1587501158198" duration="74000" />
+      <workItem from="1587501267582" duration="488000" />
+      <workItem from="1587503666819" duration="4023000" />
     </task>
     <servers />
   </component>
@@ -167,13 +203,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog" timestamp="1587508522215">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1587508522215" />
     <state x="517" y="307" key="NewPhpFileDialog" timestamp="1587205136910">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="517" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1587205136910" />
-    <state x="394" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1587357122178">
+    <state x="394" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1587503666920">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="394" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587357122178" />
+    <state x="394" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587503666920" />
+    <state x="329" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587424522289">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="329" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.768@0.0.1366.768" timestamp="1587424522289" />
   </component>
 </project>

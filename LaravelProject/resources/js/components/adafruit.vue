@@ -9,6 +9,9 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
+                            <div class="col"><h3>SELECT YOUR PREFERED MIX</h3></div>
+                        </div>
+                        <div class="row">
                             <div class="col-3">Sequence1</div>
                             <div class="col-3">Sequence2</div>
                             <div class="col-3">Sequence3</div>
@@ -18,7 +21,14 @@
                             <div class="col-3"><Button class="btn btn-info" v-on:click="mix1">Select</Button></div>
                             <div class="col-3"><Button class="btn btn-info" v-on:click="mix2">Select</Button></div>
                             <div class="col-3"><Button class="btn btn-info" v-on:click="mix3">Select</Button></div>
-                            <div class="col-3">Select one</div>
+                            <div class="col-3"><Button class="btn btn-info" v-on:click="test">test</Button></div>
+<!--                            <div class="col-3">Select one</div>-->
+                        </div>
+                        <hr>
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <Button class="btn btn-info" v-on:click="reset">Finished</Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +51,7 @@
             mix1:  async function (event) {
                 event.preventDefault();
                 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
-                let res = await axios.get('/api/mix1');
+                let res = await axios.post('/api/mix1');
             },
             mix2:  async function (event) {
                 event.preventDefault();
@@ -53,6 +63,16 @@
                 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
                 let res = await axios.get('/api/mix3');
             },
+            test: async function (event) {
+                event.preventDefault();
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
+                let res = await axios.get('/api/test');
+            },
+            reset: async function (event) {
+                event.preventDefault();
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
+                let res = await axios.get('/api/reset');
+            }
         }
     }
 </script>

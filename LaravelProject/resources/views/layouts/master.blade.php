@@ -70,7 +70,7 @@
                 <li >
                     <a href="/adafruit">
 
-                        <i class="now-ui-icons design_vector"></i>
+                        <i class="now-ui-icons ui-1_send"></i>
 
                         <p>Adafruit</p>
                     </a>
@@ -152,12 +152,7 @@
 
         <div class="panel-header panel-header-lg">
             <div class="row">
-                <div class="col-6 offset-1"><h1 class="text-white">Welcome to my api</h1></div>
-            </div>
-            <div class="row">
-                <div class="col-8 offset-4">
-                    <h1 class="text-white">used to consume Ipstack</h1>
-                </div>
+                <div class="col-6 offset-3"><h1 class="text-white">MIXER API</h1></div>
             </div>
         </div>
 

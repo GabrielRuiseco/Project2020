@@ -1982,7 +1982,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   mounted: function mounted() {
     var self = this;
     self.api_token = localStorage.getItem("api_token");
-    getadafruitkey(self);
   },
   methods: {
     change: function () {
@@ -2081,38 +2080,6 @@ function _getApiToken() {
   return _getApiToken.apply(this, arguments);
 }
 
-function getadafruitkey(_x4) {
-  return _getadafruitkey.apply(this, arguments);
-}
-
-function _getadafruitkey() {
-  _getadafruitkey = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(self) {
-    var res;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            _context4.next = 2;
-            return axios.get('/get_adafruit_key');
-
-          case 2:
-            res = _context4.sent;
-
-            if (res.data === '' || res.data === null) {} else {
-              self.adafruit_key = res.data;
-              localStorage.adafruit_key = res.data;
-            }
-
-          case 4:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4);
-  }));
-  return _getadafruitkey.apply(this, arguments);
-}
-
 /***/ }),
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/adafruit.vue?vue&type=script&lang=js&":
@@ -2161,6 +2128,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2180,7 +2157,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 event.preventDefault();
                 axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
                 _context.next = 4;
-                return axios.get('/api/mix1');
+                return axios.post('/api/mix1');
 
               case 4:
                 res = _context.sent;
@@ -2256,6 +2233,64 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return mix3;
+    }(),
+    test: function () {
+      var _test = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(event) {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                event.preventDefault();
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
+                _context4.next = 4;
+                return axios.get('/api/test');
+
+              case 4:
+                res = _context4.sent;
+
+              case 5:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      function test(_x4) {
+        return _test.apply(this, arguments);
+      }
+
+      return test;
+    }(),
+    reset: function () {
+      var _reset = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5(event) {
+        var res;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                event.preventDefault();
+                axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.api_token;
+                _context5.next = 4;
+                return axios.get('/api/reset');
+
+              case 4:
+                res = _context5.sent;
+
+              case 5:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }));
+
+      function reset(_x5) {
+        return _reset.apply(this, arguments);
+      }
+
+      return reset;
     }()
   }
 });
@@ -38778,6 +38813,8 @@ var render = function() {
           _c("div", { staticClass: "card-body" }, [
             _vm._m(1),
             _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c(
                 "div",
@@ -38818,7 +38855,35 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "col-3" }, [_vm._v("Select one")])
+              _c(
+                "div",
+                { staticClass: "col-3" },
+                [
+                  _c(
+                    "Button",
+                    { staticClass: "btn btn-info", on: { click: _vm.test } },
+                    [_vm._v("test")]
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _c("hr"),
+            _vm._v(" "),
+            _c("div", { staticClass: "row justify-content-center" }, [
+              _c(
+                "div",
+                { staticClass: "col-3" },
+                [
+                  _c(
+                    "Button",
+                    { staticClass: "btn btn-info", on: { click: _vm.reset } },
+                    [_vm._v("Finished")]
+                  )
+                ],
+                1
+              )
             ])
           ])
         ])
@@ -38833,6 +38898,16 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
       _c("h5", { staticClass: "title" }, [_vm._v("Adafruit")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("h3", [_vm._v("SELECT YOUR PREFERED MIX")])
+      ])
     ])
   },
   function() {
@@ -51253,8 +51328,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Universidad\Laravel\LaravelProject\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Universidad\Laravel\LaravelProject\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Universidad\Project2020\LaravelProject\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Universidad\Project2020\LaravelProject\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

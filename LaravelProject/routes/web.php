@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Auth::routes();
@@ -23,3 +23,4 @@ Route::post('/set_adafruit_key', 'TokensController@updateadafruit')->middleware(
 Route::post('/set_api_token', 'TokensController@updateApiToken')->middleware('auth');
 Route::get('/get_api_token', 'TokensController@getApiToken')->middleware('auth');
 Route::get('/get_adafuit_key', 'TokensController@getadafruitKey')->middleware('auth');
+Route::get('/getUsr', 'RequestController@getUsr')->middleware('auth');

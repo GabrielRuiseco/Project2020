@@ -53,7 +53,6 @@
         mounted() {
             let self = this;
             self.api_token = localStorage.getItem("api_token");
-            getadafruitkey(self);
         },
 
         methods: {
@@ -80,16 +79,6 @@
 
         } else {
             self.api_token = res.data;
-        }
-    }
-
-    async function getadafruitkey(self) {
-        let res = await axios.get('/get_adafruit_key');
-        if (res.data === '' || res.data === null) {
-
-        } else {
-            self.adafruit_key = res.data;
-            localStorage.adafruit_key = res.data
         }
     }
 
