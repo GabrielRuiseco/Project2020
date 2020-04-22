@@ -14,4 +14,5 @@
     <string name="seq3">Sequencia 3</string>
     <string name="seq_lbl">Sequencias</string>
     <string name="Terminado">Terminado</string>
+    <string name="regist_btn">Registrar</string>
 </resources>

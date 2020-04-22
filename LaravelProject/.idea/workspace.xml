@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe7ebcc-5a4e-47ad-abd1-e2cd71f1b917" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +184,7 @@
       <workItem from="1587357089664" duration="30506000" />
       <workItem from="1587501158198" duration="74000" />
       <workItem from="1587501267582" duration="488000" />
-      <workItem from="1587503666819" duration="7559000" />
+      <workItem from="1587503666819" duration="9686000" />
     </task>
     <servers />
   </component>

@@ -66,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(JSONArray response) {
                 Toast.makeText(MainActivity.this, "loading", Toast.LENGTH_LONG).show();
                 res[0] = response.toString();
+                String resSt = res[0];
+                if (resSt.contentEquals(username) && resSt.contentEquals(password)) {
+                    startActivity(new Intent(MainActivity.this, main_control.class));
+                }else{
+                    Toast.makeText(MainActivity.this, "Error, Datos no coincidentes", Toast.LENGTH_LONG).show();
+                }
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -76,12 +83,5 @@ public class MainActivity extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
-
-        String resSt = res[0];
-        if (resSt.contentEquals(username) && resSt.contentEquals(password)) {
-            startActivity(new Intent(MainActivity.this, main_control.class));
-        }else{
-            Toast.makeText(MainActivity.this, "Error, Datos no coincidentes", Toast.LENGTH_LONG).show();
-        }
     }
 }
