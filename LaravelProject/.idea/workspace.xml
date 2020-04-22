@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abe7ebcc-5a4e-47ad-abd1-e2cd71f1b917" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ANDROID/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ANDROID/app/src/main/java/com/example/appproject2020/main_control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/adafruit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/adafruit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +183,7 @@
       <workItem from="1587357089664" duration="30506000" />
       <workItem from="1587501158198" duration="74000" />
       <workItem from="1587501267582" duration="488000" />
-      <workItem from="1587503666819" duration="4023000" />
+      <workItem from="1587503666819" duration="7559000" />
     </task>
     <servers />
   </component>
