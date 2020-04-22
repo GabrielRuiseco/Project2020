@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btn_login = findViewById(R.id.button);
         btn_login.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+            login();
             }
         });
         btn_rgst = findViewById(R.id.button3);
