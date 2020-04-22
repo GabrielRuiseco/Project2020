@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         String resSt = res[0];
         if (resSt.contentEquals(username) && resSt.contentEquals(password)) {
             startActivity(new Intent(MainActivity.this, main_control.class));
+        }else{
+            Toast.makeText(MainActivity.this, "Error, Datos no coincidentes", Toast.LENGTH_LONG).show();
         }
     }
 }
