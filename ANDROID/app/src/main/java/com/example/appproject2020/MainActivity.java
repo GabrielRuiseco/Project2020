@@ -61,39 +61,24 @@ public class MainActivity extends AppCompatActivity {
 
         String url = "http://127.0.0.1:8000/getUsr";
 
-        JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 Toast.makeText(MainActivity.this, "loading", Toast.LENGTH_LONG).show();
-                res[0] =response.toString();
+                res[0] = response.toString();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
             }
-        }
-        );
+        });
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(MainActivity.this, "Loading", Toast.LENGTH_LONG).show();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
-                    }
-                }) {
-        };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        requestQueue.add(jsonArrayRequest);
 
-        String resSt=res[0];
-        if (resSt.contentEquals(username)&&resSt.contentEquals(password)){
+        String resSt = res[0];
+        if (resSt.contentEquals(username) && resSt.contentEquals(password)) {
             startActivity(new Intent(MainActivity.this, main_control.class));
         }
     }
